@@ -5,6 +5,7 @@
   "version": "0.0.5",
   "publisher": "jono",
   "repository": "https://github.com/johnw230873/vscode-plugin-Terrafor-Registry-Lookup",
+  "icon": "./icon.ico",
   "engines": {
     "vscode": "^1.83.0"
   },
