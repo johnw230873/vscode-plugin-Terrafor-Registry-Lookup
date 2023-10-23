@@ -1,0 +1,44 @@
+{
+  "name": "terraformregistrylookup",
+  "displayName": "terraformregistrylookup",
+  "description": "Lookups up resources from Terraform registry",
+  "version": "0.0.5",
+  "publisher": "jono",
+  "engines": {
+    "vscode": "^1.83.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:terraform"
+],
+  "main": "./extension.js",
+  "contributes": {
+      "languages": [{
+          "id": "terraform",
+          "extensions": [".tf"]
+      }],
+      "hoverProvider": [{
+          "language": "terraform",
+          "scheme": "file"
+      }]
+  },
+
+
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.83.0",
+    "@types/mocha": "^10.0.2",
+    "@types/node": "18.x",
+    "eslint": "^8.50.0",
+    "glob": "^10.3.3",
+    "mocha": "^10.2.0",
+    "typescript": "^5.2.2",
+    "@vscode/test-electron": "^2.3.4"
+  }
+}
