@@ -9,8 +9,6 @@ function activate(context) {
             // Check if the line starts with 'resource', 'data', or 'provider'
             if (line.startsWith('resource') || line.startsWith('data')) {
                 return handleResourceOrData(line);
-            } else if (line.startsWith('provider')) {
-                return handleProvider(line);
             }
         }
     }));
@@ -32,23 +30,7 @@ function handleResourceOrData(line) {
         }
 
         // Create the hover message
-        const message = new vscode.MarkdownString(`Terraform registry lookup:  [${parts[1]}](${url})`);
-        message.isTrusted = true;
-        return new vscode.Hover(message);
-    }
-}
-
-// Handle 'provider' lines
-function handleProvider(line) {
-    const parts = line.split('"');
-    if (parts.length >= 3) {
-        const provider = parts[1];
-
-        // Construct the URL for the Terraform registry
-        const url = `https://registry.terraform.io/providers/hashicorp/${provider}/latest`;
-
-        // Create the hover message
-        const message = new vscode.MarkdownString(`Terraform registry lookup:  ${provider}`);
+        const message = new vscode.MarkdownString(`[hashiCorp/${provider}/${type} Documentation](${url}) (ctrl + click)`);
         message.isTrusted = true;
         return new vscode.Hover(message);
     }
