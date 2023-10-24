@@ -1,65 +1,32 @@
-# terraformregistrylookup README
+Sure, here's a quick README for your extension:
 
-This is the README for your extension "terraformregistrylookup". After writing up a brief description, we recommend including the following sections.
+# Terraform Registry Lookup Extension for VS Code
+
+## Overview
+This extension provides hover tooltips in VS Code for Terraform files. When you hover over a resource or data declaration, a tooltip will appear with a link to the corresponding page in the Terraform registry.
 
 ## Features
+- Hover over a resource or data declaration to see a link to the corresponding resource or data source in the Terraform registry.
+- Hover over a provider declaration to see a link to the corresponding provider in the Terraform registry.
+- Click on the link in the tooltip to open the corresponding Terraform registry page in your web browser.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Usage
+1. Open a Terraform file in VS Code.
+2. Hover over a resource, data, or provider declaration.
+3. A tooltip will appear with the text "hashicorp/[provider]/[resource_type] Documentation]" (where "resource_type" is the type of the resource or data source).
+4. Click on the link in the tooltip to open the corresponding page in the Terraform registry.
 
-For example if there is an image subfolder under your extension project workspace:
+## Customization for Business Security Policies
+The code for this extension is designed to be easily readable and customizable for this reason it has be striped to the basic requirements. Companies are encouraged to fork this repository into their own repositories for review and use. This allows businesses to modify and build their own VS Code package that conforms to their specific security policies and ownership. 
+* [Publish your extension](https://code.visualstudio.com/api/working-with-extensions/publishing-extension) on the VS Code, noting that if this is for interal use you only need to package with vsce and not publish, packaging will provide you a vsix which you can nativilty install in vscode. 
 
-\!\[feature X\]\(images/feature-x.png\)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Installation
+To install this extension, follow these steps:
+1. Download and install Visual Studio Code, if you haven't already.
+2. Download this extension and unzip it into your VS Code extensions directory.
+3. Reload VS Code.
 
-## Requirements
+Please note that this extension is still under development and might not work perfectly. If you encounter any issues or have any suggestions for improvements, please let us know.
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Enjoy using Terraform Registry Lookup! 🚀

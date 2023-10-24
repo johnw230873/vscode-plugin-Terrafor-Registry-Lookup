@@ -30,7 +30,7 @@ function handleResourceOrData(line) {
         }
 
         // Create the hover message
-        const message = new vscode.MarkdownString(`[hashiCorp/${provider}/${type} Documentation](${url}) (ctrl + click)`);
+        const message = new vscode.MarkdownString(`[hashicorp/${provider}/${type} Documentation](${url}) (ctrl + click)`);
         message.isTrusted = true;
         return new vscode.Hover(message);
     }
